@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableViewCell" rowHeight="75" id="KGk-i7-Jjw" customClass="MyTableViewCell" customModule="ShopApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="item" translatesAutoresizingMaskIntoConstraints="NO" id="dYs-V4-XPK">
+                        <rect key="frame" x="12" y="5" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="a5I-xi-Kg3"/>
+                            <constraint firstAttribute="width" constant="70" id="cde-Dr-HRz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2d-4H-tC6">
+                        <rect key="frame" x="90" y="5" width="214" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v32-oc-x3L">
+                        <rect key="frame" x="90" y="28" width="214" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcF-cx-TAY">
+                        <rect key="frame" x="90" y="51" width="214" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htt-Fe-EZZ">
+                        <rect key="frame" x="245" y="43" width="59" height="26"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="Add to cart">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="addToCart:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="sS9-0L-xeA"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dYs-V4-XPK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="09H-mJ-dlZ"/>
+                    <constraint firstAttribute="bottom" secondItem="HcF-cx-TAY" secondAttribute="bottom" constant="5" id="0QB-cO-5xB"/>
+                    <constraint firstAttribute="trailing" secondItem="l2d-4H-tC6" secondAttribute="trailing" constant="16" id="2lc-bY-D7x"/>
+                    <constraint firstItem="HcF-cx-TAY" firstAttribute="top" secondItem="v32-oc-x3L" secondAttribute="bottom" constant="5" id="50b-m5-hJL"/>
+                    <constraint firstItem="dYs-V4-XPK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="5ff-NO-xVI"/>
+                    <constraint firstAttribute="trailing" secondItem="v32-oc-x3L" secondAttribute="trailing" constant="16" id="AAm-wU-Idp"/>
+                    <constraint firstAttribute="trailing" secondItem="HcF-cx-TAY" secondAttribute="trailing" constant="16" id="Iz4-cI-t2G"/>
+                    <constraint firstItem="HcF-cx-TAY" firstAttribute="leading" secondItem="dYs-V4-XPK" secondAttribute="trailing" constant="8" id="Y47-Na-Lc2"/>
+                    <constraint firstAttribute="bottom" secondItem="htt-Fe-EZZ" secondAttribute="bottom" constant="5" id="fcW-MG-5Io"/>
+                    <constraint firstItem="l2d-4H-tC6" firstAttribute="leading" secondItem="dYs-V4-XPK" secondAttribute="trailing" constant="8" id="mcl-yh-03G"/>
+                    <constraint firstAttribute="bottom" secondItem="dYs-V4-XPK" secondAttribute="bottom" constant="5" id="pzD-h7-DRs"/>
+                    <constraint firstItem="v32-oc-x3L" firstAttribute="leading" secondItem="dYs-V4-XPK" secondAttribute="trailing" constant="8" id="t0M-qf-0SA"/>
+                    <constraint firstItem="l2d-4H-tC6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="vx0-rA-pmE"/>
+                    <constraint firstItem="v32-oc-x3L" firstAttribute="top" secondItem="l2d-4H-tC6" secondAttribute="bottom" constant="5" id="wKB-XQ-PxO"/>
+                    <constraint firstAttribute="trailing" secondItem="htt-Fe-EZZ" secondAttribute="trailing" constant="16" id="xRR-oG-NlN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellDescription" destination="v32-oc-x3L" id="EAI-bW-kqY"/>
+                <outlet property="cellImage" destination="dYs-V4-XPK" id="Hz8-lU-EvG"/>
+                <outlet property="cellPrice" destination="HcF-cx-TAY" id="dfa-BP-6dX"/>
+                <outlet property="cellTitle" destination="l2d-4H-tC6" id="34k-f6-ihb"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="114.84375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="item" width="394" height="396"/>
+    </resources>
+</document>
